@@ -24,6 +24,9 @@ Before drafting, load **all** client materials from `./clients/$ARGUMENTS/`:
 
 ## Structure
 
+Fill in the skeleton at [`templates/offer-template.md`](../../templates/offer-template.md) —
+don't invent a layout. It already has the phases, pricing table, ROI, terms and CTA:
+
 - **Phase 0:** Setup & data review — explicitly recognise existing work (don't duplicate)
 - **Phase 1:** Audit (SEO + optional SEA assessment)
 - **Phase 2:** Monthly strategic accompaniment + enablement
@@ -31,16 +34,17 @@ Before drafting, load **all** client materials from `./clients/$ARGUMENTS/`:
 
 For each phase: scope, deliverables, timeline, investment.
 
-Management-ready elements:
+Management-ready elements (all present in the template):
 - Executive Summary (English if HQ is international)
 - High-level milestone plan (quarterly)
 - KPQ / KPI framework
 - ROI section referencing the Potential-Analysis numbers
+- Commercial terms (validity, payment, notice), assumptions & scope boundaries, and a clear next-step CTA
 
 ## Output
 
 Save to `./clients/$ARGUMENTS/YYYY-MM-DD_Offer/`:
-- `offer_<client>_<YYYY-MM-DD>.md` (source)
+- `offer_<client>_<YYYY-MM-DD>.md` (source — copy from `templates/offer-template.md`)
 - Then run `/visibly-seo-pdf-build` to produce the brand-compliant PDF.
 
 Pull your contact / bank / legal block from your own private notes — keep them out

@@ -148,6 +148,7 @@ claude-code-seo-starter/
 ├── templates/
 │   ├── ci/                   # CI base — brand.py (constants) + CI.md (reference)
 │   ├── client-template/      # copy → clients/<domain>/ (CLAUDE.md + _knowledge/)
+│   ├── offer-template.md     # fill-in offer skeleton (phases, pricing, ROI, terms, CTA)
 │   └── pdf_example.py        # minimal CI-PDF starter (fpdf2)
 └── scripts/
     └── check-setup.sh        # verify your env is wired correctly

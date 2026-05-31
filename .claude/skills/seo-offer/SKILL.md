@@ -24,6 +24,10 @@ analysis the client already paid for; reference and build on it.
 
 ## Step 3 — Structure the offer in phases
 
+Don't invent a layout — fill in the ready skeleton at
+[`templates/offer-template.md`](../../../templates/offer-template.md). It already has the
+phases, pricing table, ROI, milestone plan, KPQ/KPI, terms, assumptions and CTA.
+
 For **each** phase give: scope · deliverables · timeline · investment.
 
 - **Phase 0 — Setup & data review.** Onboarding, access, explicit recognition of prior work.
@@ -48,6 +52,7 @@ internal linking". Give priority and estimated effort per workstream.
 
 ## Output
 
-`clients/<domain>/YYYY-MM-DD_Offer/visibly-seo-offer_<date>.md` → then hand to `ci-pdf-build` /
+`clients/<domain>/YYYY-MM-DD_Offer/offer_<client>_<date>.md` (copied from
+`templates/offer-template.md`) → then hand to `ci-pdf-build` /
 `/visibly-seo-pdf-build` for the client-ready PDF. Slash command: `/visibly-seo-offer <domain>`.
 Methodology: `docs/workflows.md`.
