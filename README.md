@@ -36,6 +36,23 @@ This repo packages exactly that. Clone it, drop in your Visibly AI key, and you 
 
 ## 🚀 Quickstart
 
+There are two ways to use this — pick one.
+
+### Option A — Install as a plugin (fastest)
+
+```
+/plugin marketplace add AntonioBlago/claude-code-seo-starter
+/plugin install seo-starter@antonioblago
+```
+
+You get the `/status-quo`, `/potenzial`, `/angebot`, `/pdf-build` commands, the
+auto-invoked SEO skills, the SEO-intent hook, and the Visibly AI MCP — wired in.
+Then just set your key (step 3 below). Restart with `/reload-plugins` if needed.
+
+### Option B — Clone the template
+
+Use the full repo (docs, PDF template, setup script) as a project scaffold.
+
 ### 1. Prerequisites
 
 - [Claude Code](https://docs.claude.com/en/docs/claude-code) installed (`npm install -g @anthropic-ai/claude-code`)
@@ -107,13 +124,17 @@ See **[`docs/setup.md`](docs/setup.md)** for a deeper walkthrough and **[`docs/b
 
 ```
 claude-code-seo-starter/
+├── .claude-plugin/           # makes this repo an installable plugin + marketplace
+│   ├── plugin.json           # plugin manifest
+│   └── marketplace.json      # marketplace catalog (one repo = both)
 ├── .mcp.json                 # Visibly AI MCP connection (key via env)
 ├── .env.example              # copy → .env, add your key
 ├── CLAUDE.md                 # project instructions Claude reads on every run
 ├── .claude/
 │   ├── commands/             # /status-quo /potenzial /angebot /pdf-build
-│   ├── hooks/                # seo-check.sh — SEO-intent nudge
-│   └── settings.json         # hook registration + sane permissions
+│   ├── skills/               # auto-invoked SEO skills (status-quo, potential, offer, pdf)
+│   ├── hooks/                # seo-check.sh + hooks.json — SEO-intent nudge
+│   └── settings.json         # hook registration + sane permissions (clone mode)
 ├── docs/
 │   ├── setup.md              # detailed setup
 │   ├── workflows.md          # the 4-phase methodology

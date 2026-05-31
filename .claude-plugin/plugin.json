@@ -1,0 +1,18 @@
+{
+  "name": "seo-starter",
+  "displayName": "SEO Agency & Freelancer Starter",
+  "version": "0.1.0",
+  "description": "Wire up the Visibly AI MCP and run the full SEO client workflow in Claude Code: status-quo, potential analysis, offer, and a CI-compliant PDF. Intent-aware CTR model from the Keyword Study 2026.",
+  "author": {
+    "name": "Antonio Blago",
+    "url": "https://antonioblago.de"
+  },
+  "homepage": "https://github.com/AntonioBlago/claude-code-seo-starter",
+  "repository": "https://github.com/AntonioBlago/claude-code-seo-starter",
+  "license": "MIT",
+  "keywords": ["seo", "mcp", "visibly-ai", "agency", "freelancer", "gsc", "ctr"],
+  "commands": "./.claude/commands",
+  "skills": "./.claude/skills",
+  "hooks": "./.claude/hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}

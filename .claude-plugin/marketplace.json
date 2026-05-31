@@ -1,0 +1,18 @@
+{
+  "name": "antonioblago",
+  "displayName": "Antonio Blago — SEO Plugins",
+  "description": "SEO & GEO tooling for Claude Code by Antonio Blago (Neuro-SEO System®).",
+  "owner": {
+    "name": "Antonio Blago",
+    "url": "https://antonioblago.de"
+  },
+  "homepage": "https://github.com/AntonioBlago/claude-code-seo-starter",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "seo-starter",
+      "source": "./",
+      "description": "Visibly AI MCP + full SEO client workflow (status-quo, potential, offer, CI-PDF) with the intent-aware Keyword Study 2026 CTR model."
+    }
+  ]
+}
