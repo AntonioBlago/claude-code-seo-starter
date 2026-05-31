@@ -139,8 +139,11 @@ claude-code-seo-starter/
 │   ├── setup.md              # detailed setup
 │   ├── workflows.md          # the 4-phase methodology
 │   ├── ctr-model.md          # empirical CTR curve
+│   ├── folder-structure.md   # client knowledge base + CI base conventions
 │   └── best-practices.md     # lessons learned
 ├── templates/
+│   ├── ci/                   # CI base — brand.py (constants) + CI.md (reference)
+│   ├── client-template/      # copy → clients/<domain>/ (CLAUDE.md + _knowledge/)
 │   └── pdf_example.py        # minimal CI-PDF starter (fpdf2)
 └── scripts/
     └── check-setup.sh        # verify your env is wired correctly

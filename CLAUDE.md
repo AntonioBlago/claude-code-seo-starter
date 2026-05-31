@@ -44,15 +44,22 @@ These map 1:1 to the slash commands in `.claude/commands/`. Full methodology in
 3. **`/angebot <domain>`** — What should the client buy? A phased, tailored offer.
 4. **`/pdf-build <script>`** — Ship a clean, brand-compliant PDF.
 
-## Folder conventions
+## Folder conventions & knowledge base
 
-- One folder per client: `clients/<domain.tld>/` (e.g. `clients/example.com/`).
-- Dated task subfolders inside: `YYYY-MM-DD_<Task Name>/`. Never dump files flat.
-- Client data stays out of git (see `.gitignore`).
+Full reference: [`docs/folder-structure.md`](docs/folder-structure.md).
+
+- **One folder per client:** `clients/<domain.tld>/` (e.g. `clients/example.com/`).
+  Start from [`templates/client-template/`](templates/client-template/).
+- **Dated task subfolders** inside: `YYYY-MM-DD_<Task Name>/`. Never dump files flat.
+- **Knowledge base:** each client folder has `_knowledge/` (audits, keywords, calls,
+  offers, brand) plus a per-client `CLAUDE.md` for context. **Read `_knowledge/` first**
+  so you build on prior work instead of duplicating it.
+- **Client data stays out of git** — `clients/` is gitignored.
 
 ## Brand identity — [YOUR NAME / AGENCY]
 
-> Fill these in. They drive the PDF output and client-facing copy.
+> The CI base lives in [`templates/ci/`](templates/ci/): `brand.py` (constants you
+> import) + `CI.md` (human reference). Fill them in once; everything else imports them.
 
 - **Name:** [Your Name / Agency]
 - **Tagline:** [e.g. Neuro-SEO System®]
