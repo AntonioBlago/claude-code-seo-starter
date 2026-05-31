@@ -35,7 +35,7 @@ fi
 
 # commands
 cmds=0
-for c in status-quo potenzial angebot pdf-build; do
+for c in status-quo potential offer pdf-build; do
   [ -f ".claude/commands/$c.md" ] && cmds=$((cmds+1))
 done
 [ "$cmds" -eq 4 ] && pass "all 4 slash commands present" || bad "only $cmds/4 slash commands found"

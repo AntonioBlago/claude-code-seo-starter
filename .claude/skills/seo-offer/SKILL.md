@@ -49,5 +49,5 @@ internal linking". Give priority and estimated effort per workstream.
 ## Output
 
 `clients/<domain>/YYYY-MM-DD_Offer/offer_<date>.md` → then hand to `ci-pdf-build` /
-`/pdf-build` for the client-ready PDF. Slash command: `/angebot <domain>`.
+`/pdf-build` for the client-ready PDF. Slash command: `/offer <domain>`.
 Methodology: `docs/workflows.md`.

@@ -4,7 +4,7 @@ The whole client engagement, broken into four chained phases. Each one is a slas
 command in `.claude/commands/`. Run them in order; each builds on the last.
 
 ```
-/status-quo  →  /potenzial  →  /angebot  →  /pdf-build
+/status-quo  →  /potential  →  /offer  →  /pdf-build
 ```
 
 ---

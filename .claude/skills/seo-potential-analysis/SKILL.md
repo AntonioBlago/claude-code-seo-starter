@@ -82,4 +82,4 @@ Save under `clients/<domain>/YYYY-MM-DD_Potential/`:
 - `top20_delta.md` — Top 20 keywords by click-delta (the headline story)
 - `roi_scenarios.md` — the three scenarios with the lead & SEA math
 
-Slash command: `/potenzial <domain>`. Full methodology: `docs/workflows.md`.
+Slash command: `/potential <domain>`. Full methodology: `docs/workflows.md`.

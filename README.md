@@ -28,8 +28,8 @@ This repo packages exactly that. Install it, drop in a [Visibly AI](https://visi
 |---|---|
 | **`.mcp.json`** | Pre-wired [Visibly AI MCP](https://visibly-ai.com) connection — GSC, keywords, backlinks, competitors, on-page audits, crawling. |
 | **`/status-quo`** | Maps a client's live organic visibility: GSC × target keywords, classification, quick wins. |
-| **`/potenzial`** | Potential analysis: empirical CTR model → realistic 12-month targets → traffic, lead & ROI math. |
-| **`/angebot`** | Drafts a tailored, phased SEO consulting offer from your analysis + client context. |
+| **`/potential`** | Potential analysis: empirical CTR model → realistic 12-month targets → traffic, lead & ROI math. |
+| **`/offer`** | Drafts a tailored, phased SEO consulting offer from your analysis + client context. |
 | **`/pdf-build`** | Turns any analysis script into a clean, brand-compliant PDF. |
 | **SEO hook** | A `UserPromptSubmit` hook that detects SEO intent and steers Claude to Visibly AI MCP tools instead of generic scraping. |
 | **`CLAUDE.md`** | A project-instruction template encoding the whole workflow + folder conventions. |
@@ -46,7 +46,7 @@ There are two ways to use this — pick one.
 /plugin install seo-starter@antonioblago
 ```
 
-You get the `/status-quo`, `/potenzial`, `/angebot`, `/pdf-build` commands, the
+You get the `/status-quo`, `/potential`, `/offer`, `/pdf-build` commands, the
 auto-invoked SEO skills, the SEO-intent hook, and the Visibly AI MCP — wired in.
 Then just set your key (step 3 below). Restart with `/reload-plugins` if needed.
 
@@ -100,7 +100,7 @@ That's it. You're running the full SEO workflow.
 Each slash command corresponds to one phase of a real client engagement. They chain:
 
 ```
-/status-quo <domain>   →   /potenzial <domain>   →   /angebot <domain>   →   /pdf-build <script.py>
+/status-quo <domain>   →   /potential <domain>   →   /offer <domain>   →   /pdf-build <script.py>
    (where do we           (what's the upside,        (what should the          (hand the client a
     rank today?)           in clicks & €?)            client buy?)              polished PDF)
 ```
@@ -135,7 +135,7 @@ claude-code-seo-starter/
 ├── .env.example              # copy → .env, add your key
 ├── CLAUDE.md                 # project instructions Claude reads on every run
 ├── .claude/
-│   ├── commands/             # /status-quo /potenzial /angebot /pdf-build
+│   ├── commands/             # /status-quo /potential /offer /pdf-build
 │   ├── skills/               # auto-invoked SEO skills (status-quo, potential, offer, pdf)
 │   ├── hooks/                # seo-check.sh + hooks.json — SEO-intent nudge
 │   └── settings.json         # hook registration + sane permissions (clone mode)

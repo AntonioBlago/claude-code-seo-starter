@@ -12,7 +12,7 @@ Before drafting, load **all** client materials from `./clients/$ARGUMENTS/`:
 - Existing audits (PDF — extract text first)
 - Call transcripts / email threads / previous offers
 - Status-Quo and Potential outputs (must exist — otherwise run `/status-quo` and
-  `/potenzial` first)
+  `/potential` first)
 
 ## Client context to surface
 

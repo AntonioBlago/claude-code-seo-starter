@@ -38,10 +38,10 @@ These map 1:1 to the slash commands in `.claude/commands/`. Full methodology in
 
 1. **`/status-quo <domain>`** — Where does the client rank today? GSC × target
    keywords, classification, quick wins.
-2. **`/potenzial <domain>`** — What's the upside? Empirical CTR model → realistic
+2. **`/potential <domain>`** — What's the upside? Empirical CTR model → realistic
    12-month targets → traffic, lead & ROI math. CTR curve in
    [`docs/ctr-model.md`](docs/ctr-model.md).
-3. **`/angebot <domain>`** — What should the client buy? A phased, tailored offer.
+3. **`/offer <domain>`** — What should the client buy? A phased, tailored offer.
 4. **`/pdf-build <script>`** — Ship a clean, brand-compliant PDF.
 
 ## Folder conventions & knowledge base
