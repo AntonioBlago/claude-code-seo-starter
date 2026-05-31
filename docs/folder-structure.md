@@ -11,10 +11,12 @@ claude-code-seo-starter/
 ├── .claude/                  # commands, skills, hooks, settings
 ├── docs/                     # methodology (this file, workflows, ctr-model, best-practices)
 ├── templates/
-│   ├── ci/                   # CI base — brand.py + CI.md (your corporate identity)
-│   ├── client-template/      # copy → clients/<domain>/ for each new client
-│   ├── offer-template.md     # fill-in offer skeleton (phases, pricing, ROI, terms)
-│   └── pdf_example.py        # CI-compliant PDF starter
+│   ├── ci/                       # CI base — brand.py + CI.md (your corporate identity)
+│   ├── client-template/          # copy → clients/<domain>/ for each new client
+│   ├── status-quo-template.md    # fill-in status-quo skeleton (classification, quick wins)
+│   ├── potential-template.md     # fill-in potential skeleton (deltas, clusters, ROI scenarios)
+│   ├── offer-template.md         # fill-in offer skeleton (phases, pricing, ROI, terms)
+│   └── pdf_example.py            # CI-compliant PDF starter
 └── clients/                  # ← gitignored. All client data lives here, never in git.
 ```
 

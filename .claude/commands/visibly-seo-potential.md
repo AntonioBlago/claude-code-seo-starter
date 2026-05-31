@@ -33,7 +33,12 @@ Run **Workflow 2 — Potential Analysis** (see `docs/workflows.md`) for client `
 
 ## Output
 
+Fill in the skeleton at [`templates/potential-template.md`](../../templates/potential-template.md) —
+don't invent a layout. It already has the method/assumptions block, the target-position
+matrix, the per-keyword delta table, the cluster rollup, Top-20-by-delta, the three-scenario
+value table, and the ROI section.
+
 Save to `./clients/$ARGUMENTS/YYYY-MM-DD_Potential/`:
-- `potential_<YYYY-MM-DD>.xlsx` (per-keyword Δ + cluster rollup)
-- `top20_delta.md` (Top 20 keywords by click-delta)
+- `potential_<YYYY-MM-DD>.md` (summary — copy from `templates/potential-template.md`)
+- `potential_<YYYY-MM-DD>.xlsx` (per-keyword Δ + cluster rollup — all rows)
 - `roi_scenarios.md` (conservative / realistic / optimistic)

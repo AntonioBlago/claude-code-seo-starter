@@ -50,10 +50,13 @@ If no project/connection exists, stop and tell the user what to connect first.
 
 ## Output
 
-Save under `clients/<domain>/YYYY-MM-DD_Status-Quo/`:
-- `status_quo_<date>.xlsx` — full cross-referenced table
+Fill in the ready skeleton at [`templates/status-quo-template.md`](../../../templates/status-quo-template.md) —
+it already has the visibility counts, classification split, cross-referenced keyword table,
+underperforming pages, quick wins and competitor benchmark. Save under
+`clients/<domain>/YYYY-MM-DD_Status-Quo/`:
+- `status_quo_<date>.md` — summary (copied from the template)
+- `status_quo_<date>.xlsx` — full cross-referenced table (all rows)
 - `quick_wins.md` — prioritised, actionable (specific lever per keyword)
-- `status_quo_summary.md` — executive summary
 
 **Only live-verified facts** go into any deliverable. Slash command: `/visibly-seo-status-quo <domain>`.
 Methodology: `docs/workflows.md`.

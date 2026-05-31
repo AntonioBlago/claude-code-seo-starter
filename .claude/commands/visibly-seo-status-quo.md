@@ -28,9 +28,14 @@ Run **Workflow 1 — SEO Status-Quo Analysis** (see `docs/workflows.md`) for cli
 
 ## Output
 
+Fill in the skeleton at [`templates/status-quo-template.md`](../../templates/status-quo-template.md) —
+don't invent a layout. It already has the visibility-at-a-glance counts, the classification
+split, the cross-referenced keyword table, underperforming pages, quick wins, and the
+competitor benchmark. **Live-verified GSC values only.**
+
 Save to `./clients/$ARGUMENTS/YYYY-MM-DD_Status-Quo/`:
-- `status_quo_<YYYY-MM-DD>.xlsx` (full table)
-- `quick_wins.md` (actionable list)
-- `status_quo_summary.md` (executive summary)
+- `status_quo_<YYYY-MM-DD>.md` (summary — copy from `templates/status-quo-template.md`)
+- `status_quo_<YYYY-MM-DD>.xlsx` (full cross-referenced table — all rows)
+- `quick_wins.md` (actionable list, specific lever per keyword)
 
 Use today's date for the folder and filename.

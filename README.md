@@ -146,10 +146,12 @@ claude-code-seo-starter/
 │   ├── folder-structure.md   # client knowledge base + CI base conventions
 │   └── best-practices.md     # lessons learned
 ├── templates/
-│   ├── ci/                   # CI base — brand.py (constants) + CI.md (reference)
-│   ├── client-template/      # copy → clients/<domain>/ (CLAUDE.md + _knowledge/)
-│   ├── offer-template.md     # fill-in offer skeleton (phases, pricing, ROI, terms, CTA)
-│   └── pdf_example.py        # minimal CI-PDF starter (fpdf2)
+│   ├── ci/                       # CI base — brand.py (constants) + CI.md (reference)
+│   ├── client-template/          # copy → clients/<domain>/ (CLAUDE.md + _knowledge/)
+│   ├── status-quo-template.md    # fill-in status-quo skeleton (classification, quick wins)
+│   ├── potential-template.md     # fill-in potential skeleton (deltas, clusters, ROI scenarios)
+│   ├── offer-template.md         # fill-in offer skeleton (phases, pricing, ROI, terms, CTA)
+│   └── pdf_example.py            # minimal CI-PDF starter (fpdf2)
 └── scripts/
     └── check-setup.sh        # verify your env is wired correctly
 ```
@@ -164,7 +166,7 @@ MIT — see [`LICENSE`](LICENSE). Use it commercially, fork it, ship it for your
 
 ## 💬 Want help setting it up?
 
-If you'd rather have this dialled in to your agency's workflow — or want to talk SEO, Claude Code, or vibe coding — **[book a free consultation](https://calendly.com/antonio-blago/vibe-coding-consultation?back=1&month=2026-06)**.
+If you'd rather have this dialled in to your agency's workflow — or want to talk SEO, Claude Code, or vibe coding — **[book a consultation](https://calendly.com/antonio-blago/vibe-coding-consultation?back=1&month=2026-06)**.
 
 ---
 

@@ -77,9 +77,12 @@ range, not a single fragile number.
 
 ## Output
 
-Save under `clients/<domain>/YYYY-MM-DD_Potential/`:
-- `potential_<date>.xlsx` — per-keyword delta + cluster rollup
-- `top20_delta.md` — Top 20 keywords by click-delta (the headline story)
+Fill in the ready skeleton at [`templates/potential-template.md`](../../../templates/potential-template.md) —
+it already has the method/assumptions block, target-position matrix, per-keyword delta table,
+cluster rollup, Top-20-by-delta and the three-scenario value + ROI sections. Save under
+`clients/<domain>/YYYY-MM-DD_Potential/`:
+- `potential_<date>.md` — summary (copied from the template)
+- `potential_<date>.xlsx` — per-keyword delta + cluster rollup (all rows)
 - `roi_scenarios.md` — the three scenarios with the lead & SEA math
 
 Slash command: `/visibly-seo-potential <domain>`. Full methodology: `docs/workflows.md`.
