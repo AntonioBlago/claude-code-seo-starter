@@ -31,3 +31,8 @@ Thumbs.db
 
 # Playwright / MCP scratch
 .playwright-mcp/
+
+# MCP registry publisher CLI (local tool, not part of the template)
+mcp-publisher
+mcp-publisher.exe
+mcp-publisher_*.tar.gz
