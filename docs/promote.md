@@ -9,27 +9,32 @@ Status legend: ✅ done in-repo · 🔑 needs your GitHub login / a form · ⏳ 
 
 ---
 
-## 1. Official MCP Registry — ✅ manifest ready, 🔑 publish step is yours
+## 1. Official MCP Registry — ✅ PUBLISHED (`io.github.AntonioBlago/visibly-ai` v0.1.0)
 
 The authoritative registry MCP clients are starting to index. The manifest lives at
-[`server.json`](../server.json) (remote `streamable-http`, GitHub namespace `io.github.antonioblago/visibly-ai` —
+[`server.json`](../server.json) (remote `streamable-http`, GitHub namespace `io.github.AntonioBlago/visibly-ai` —
 **no DNS verification needed**, the GitHub OAuth login proves ownership).
 
-Publish (one-time, interactive — the OAuth device-flow login can't be scripted):
+Re-publish a new version (one-time per version, interactive — the OAuth device-flow login can't be scripted):
 
 ```bash
 # 1. Install the publisher CLI (see latest release for your OS):
 #    https://github.com/modelcontextprotocol/registry/releases/latest
 # 2. From the repo root:
-mcp-publisher login github      # opens github.com/login/device, enter the code
-mcp-publisher publish           # reads ./server.json, validates, publishes
+mcp-publisher validate server.json   # catch schema errors before publishing
+mcp-publisher login github           # opens github.com/login/device, enter the code
+mcp-publisher publish                # reads ./server.json, validates, publishes
 # 3. Verify:
-curl "https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.antonioblago/visibly-ai"
+curl "https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.AntonioBlago/visibly-ai"
 ```
 
-If `publish` complains about a missing `repository.id`, run `mcp-publisher init` once to let it
-backfill the GitHub repo id, then re-publish. Registry is in **preview** — expect occasional
-schema bumps; keep `$schema` in `server.json` current.
+Gotchas learned the hard way:
+- **The GitHub namespace is case-sensitive.** It must match your GitHub login exactly
+  (`io.github.AntonioBlago/...`, not `…antonioblago…`) or `publish` returns `403 Forbidden`.
+- **`description` must be ≤ 100 characters** or `validate`/`publish` returns `422`.
+- If `publish` complains about a missing `repository.id`, run `mcp-publisher init` once to let it
+  backfill the GitHub repo id, then re-publish. Registry is in **preview** — expect occasional
+  schema bumps; keep `$schema` in `server.json` current.
 
 **Payoff: high.** This is the source other directories (Glama, PulseMCP, client pickers) sync from.
 
