@@ -132,6 +132,7 @@ claude-code-seo-starter/
 │   ├── plugin.json           # plugin manifest
 │   └── marketplace.json      # marketplace catalog (one repo = both)
 ├── .mcp.json                 # Visibly AI MCP connection (key via env)
+├── server.json               # MCP-registry manifest (publish via mcp-publisher)
 ├── .env.example              # copy → .env, add your key
 ├── CLAUDE.md                 # project instructions Claude reads on every run
 ├── .claude/
@@ -144,7 +145,8 @@ claude-code-seo-starter/
 │   ├── workflows.md          # the 4-phase methodology
 │   ├── ctr-model.md          # empirical CTR curve
 │   ├── folder-structure.md   # client knowledge base + CI base conventions
-│   └── best-practices.md     # lessons learned
+│   ├── best-practices.md     # lessons learned
+│   └── promote.md            # discoverability checklist (registry, awesome lists)
 ├── templates/
 │   ├── ci/                       # CI base — brand.py (constants) + CI.md (reference)
 │   ├── client-template/          # copy → clients/<domain>/ (CLAUDE.md + _knowledge/)

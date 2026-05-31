@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.antonioblago/visibly-ai",
+  "title": "Visibly AI — SEO MCP Server",
+  "description": "Remote MCP server for SEO and GEO work: Google Search Console queries, keyword research, backlinks, competitor benchmarking, on-page audits, and site crawls via the Visibly AI platform.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/AntonioBlago/claude-code-seo-starter",
+    "source": "github"
+  },
+  "websiteUrl": "https://visibly-ai.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.visibly-ai.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <your Visibly AI API key>. Get a free key at https://visibly-ai.com",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
