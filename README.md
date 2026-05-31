@@ -10,6 +10,7 @@
   <a href="#-the-workflows">Workflows</a> •
   <a href="#-the-ctr-model">CTR Model</a> •
   <a href="#-customise-it">Customise</a> •
+  <a href="https://visibly-ai.com">Get a free key</a> •
   <a href="https://calendly.com/antonio-blago/vibe-coding-consultation?back=1&month=2026-06">Book a call</a>
 </p>
 
@@ -19,13 +20,13 @@
 
 SEO consulting is the same five jobs over and over: pull the real ranking data, map it against the client's keyword set, quantify the opportunity, turn that into an offer, and ship a presentable PDF. Claude Code can do all of it — *if* you give it the data sources, the methodology, and the guardrails.
 
-This repo packages exactly that. Clone it, drop in your Visibly AI key, and you have an SEO analyst on tap that knows your process.
+This repo packages exactly that. Install it, drop in a [Visibly AI](https://visibly-ai.com) key — **free tier available, 30 seconds to a key** — and you have an SEO analyst on tap that knows your process. Visibly AI is the data engine behind the whole workflow: GSC, keywords, backlinks, competitors and on-page audits through one MCP.
 
 ## ✨ What's inside
 
 | Piece | What it does |
 |---|---|
-| **`.mcp.json`** | Pre-wired [Visibly AI MCP](https://visibly.ai) connection — GSC, keywords, backlinks, competitors, on-page audits, crawling. |
+| **`.mcp.json`** | Pre-wired [Visibly AI MCP](https://visibly-ai.com) connection — GSC, keywords, backlinks, competitors, on-page audits, crawling. |
 | **`/status-quo`** | Maps a client's live organic visibility: GSC × target keywords, classification, quick wins. |
 | **`/potenzial`** | Potential analysis: empirical CTR model → realistic 12-month targets → traffic, lead & ROI math. |
 | **`/angebot`** | Drafts a tailored, phased SEO consulting offer from your analysis + client context. |
@@ -56,7 +57,7 @@ Use the full repo (docs, PDF template, setup script) as a project scaffold.
 ### 1. Prerequisites
 
 - [Claude Code](https://docs.claude.com/en/docs/claude-code) installed (`npm install -g @anthropic-ai/claude-code`)
-- A [Visibly AI](https://visibly.ai) account + API key
+- A [Visibly AI](https://visibly-ai.com) account — **[sign up free](https://visibly-ai.com)**, the free tier is enough to run the full workflow
 - Python 3.11+ (only needed for the PDF / data-crunching helpers)
 
 ### 2. Get the blueprint
@@ -68,6 +69,9 @@ cd claude-code-seo-starter
 ```
 
 ### 3. Add your Visibly AI key
+
+**Don't have a key yet?** Create a free account at **[visibly-ai.com](https://visibly-ai.com)** and copy your
+API key from the dashboard — takes about 30 seconds, no card required.
 
 ```bash
 cp .env.example .env

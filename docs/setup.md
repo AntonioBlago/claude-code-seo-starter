@@ -22,7 +22,7 @@ cd claude-code-seo-starter
 
 ## 3. Wire up Visibly AI
 
-1. Create an account at <https://visibly.ai> and grab your API key (Account → API).
+1. Create an account at <https://visibly-ai.com> and grab your API key (Account → API).
    Keys look like `lc_...`.
 2. Copy the env template and paste your key:
    ```bash
