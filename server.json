@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.antonioblago/visibly-ai",
+  "name": "io.github.AntonioBlago/visibly-ai",
   "title": "Visibly AI — SEO MCP Server",
   "description": "Remote SEO/GEO MCP: Search Console, keyword research, backlinks, competitor & on-page audits.",
   "version": "0.1.0",
