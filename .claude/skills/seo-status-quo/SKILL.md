@@ -55,5 +55,5 @@ Save under `clients/<domain>/YYYY-MM-DD_Status-Quo/`:
 - `quick_wins.md` — prioritised, actionable (specific lever per keyword)
 - `status_quo_summary.md` — executive summary
 
-**Only live-verified facts** go into any deliverable. Slash command: `/status-quo <domain>`.
+**Only live-verified facts** go into any deliverable. Slash command: `/visibly-seo-status-quo <domain>`.
 Methodology: `docs/workflows.md`.

@@ -42,5 +42,5 @@ done
 
 echo ""
 echo "Result: $ok passed, $fail failed."
-[ "$fail" -eq 0 ] && echo "All good — run 'claude' and try /status-quo example.com" || echo "Fix the items above, then re-run."
+[ "$fail" -eq 0 ] && echo "All good — run 'claude' and try /visibly-seo-status-quo example.com" || echo "Fix the items above, then re-run."
 exit "$fail"

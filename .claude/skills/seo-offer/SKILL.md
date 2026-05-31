@@ -48,6 +48,6 @@ internal linking". Give priority and estimated effort per workstream.
 
 ## Output
 
-`clients/<domain>/YYYY-MM-DD_Offer/offer_<date>.md` → then hand to `ci-pdf-build` /
-`/pdf-build` for the client-ready PDF. Slash command: `/offer <domain>`.
+`clients/<domain>/YYYY-MM-DD_Offer/visibly-seo-offer_<date>.md` → then hand to `ci-pdf-build` /
+`/visibly-seo-pdf-build` for the client-ready PDF. Slash command: `/visibly-seo-offer <domain>`.
 Methodology: `docs/workflows.md`.

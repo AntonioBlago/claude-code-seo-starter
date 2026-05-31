@@ -52,5 +52,5 @@ Never hand over a PDF you haven't looked at.
 
 ## Output
 
-A4 PDF in the client's task folder. Slash command: `/pdf-build <script.py>`.
+A4 PDF in the client's task folder. Slash command: `/visibly-seo-pdf-build <script.py>`.
 Best practices: `docs/best-practices.md`.

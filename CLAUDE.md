@@ -36,13 +36,13 @@ over assumptions** at every step.
 These map 1:1 to the slash commands in `.claude/commands/`. Full methodology in
 [`docs/workflows.md`](docs/workflows.md).
 
-1. **`/status-quo <domain>`** — Where does the client rank today? GSC × target
+1. **`/visibly-seo-status-quo <domain>`** — Where does the client rank today? GSC × target
    keywords, classification, quick wins.
-2. **`/potential <domain>`** — What's the upside? Empirical CTR model → realistic
+2. **`/visibly-seo-potential <domain>`** — What's the upside? Empirical CTR model → realistic
    12-month targets → traffic, lead & ROI math. CTR curve in
    [`docs/ctr-model.md`](docs/ctr-model.md).
-3. **`/offer <domain>`** — What should the client buy? A phased, tailored offer.
-4. **`/pdf-build <script>`** — Ship a clean, brand-compliant PDF.
+3. **`/visibly-seo-offer <domain>`** — What should the client buy? A phased, tailored offer.
+4. **`/visibly-seo-pdf-build <script>`** — Ship a clean, brand-compliant PDF.
 
 ## Folder conventions & knowledge base
 

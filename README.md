@@ -27,10 +27,10 @@ This repo packages exactly that. Install it, drop in a [Visibly AI](https://visi
 | Piece | What it does |
 |---|---|
 | **`.mcp.json`** | Pre-wired [Visibly AI MCP](https://visibly-ai.com) connection — GSC, keywords, backlinks, competitors, on-page audits, crawling. |
-| **`/status-quo`** | Maps a client's live organic visibility: GSC × target keywords, classification, quick wins. |
-| **`/potential`** | Potential analysis: empirical CTR model → realistic 12-month targets → traffic, lead & ROI math. |
-| **`/offer`** | Drafts a tailored, phased SEO consulting offer from your analysis + client context. |
-| **`/pdf-build`** | Turns any analysis script into a clean, brand-compliant PDF. |
+| **`/visibly-seo-status-quo`** | Maps a client's live organic visibility: GSC × target keywords, classification, quick wins. |
+| **`/visibly-seo-potential`** | Potential analysis: empirical CTR model → realistic 12-month targets → traffic, lead & ROI math. |
+| **`/visibly-seo-offer`** | Drafts a tailored, phased SEO consulting offer from your analysis + client context. |
+| **`/visibly-seo-pdf-build`** | Turns any analysis script into a clean, brand-compliant PDF. |
 | **SEO hook** | A `UserPromptSubmit` hook that detects SEO intent and steers Claude to Visibly AI MCP tools instead of generic scraping. |
 | **`CLAUDE.md`** | A project-instruction template encoding the whole workflow + folder conventions. |
 | **`docs/`** | The methodology written out: workflows, the CTR model, and best practices. |
@@ -46,7 +46,7 @@ There are two ways to use this — pick one.
 /plugin install seo-starter@antonioblago
 ```
 
-You get the `/status-quo`, `/potential`, `/offer`, `/pdf-build` commands, the
+You get the `/visibly-seo-status-quo`, `/visibly-seo-potential`, `/visibly-seo-offer`, `/visibly-seo-pdf-build` commands, the
 auto-invoked SEO skills, the SEO-intent hook, and the Visibly AI MCP — wired in.
 Then just set your key (step 3 below). Restart with `/reload-plugins` if needed.
 
@@ -90,7 +90,7 @@ claude
 On first run, Claude Code will ask you to approve the Visibly AI MCP server. Approve it, then try:
 
 ```
-/status-quo example.com
+/visibly-seo-status-quo example.com
 ```
 
 That's it. You're running the full SEO workflow.
@@ -100,7 +100,7 @@ That's it. You're running the full SEO workflow.
 Each slash command corresponds to one phase of a real client engagement. They chain:
 
 ```
-/status-quo <domain>   →   /potential <domain>   →   /offer <domain>   →   /pdf-build <script.py>
+/visibly-seo-status-quo <domain>   →   /visibly-seo-potential <domain>   →   /visibly-seo-offer <domain>   →   /visibly-seo-pdf-build <script.py>
    (where do we           (what's the upside,        (what should the          (hand the client a
     rank today?)           in clicks & €?)            client buy?)              polished PDF)
 ```
@@ -135,7 +135,7 @@ claude-code-seo-starter/
 ├── .env.example              # copy → .env, add your key
 ├── CLAUDE.md                 # project instructions Claude reads on every run
 ├── .claude/
-│   ├── commands/             # /status-quo /potential /offer /pdf-build
+│   ├── commands/             # /visibly-seo-status-quo /visibly-seo-potential /visibly-seo-offer /visibly-seo-pdf-build
 │   ├── skills/               # auto-invoked SEO skills (status-quo, potential, offer, pdf)
 │   ├── hooks/                # seo-check.sh + hooks.json — SEO-intent nudge
 │   └── settings.json         # hook registration + sane permissions (clone mode)

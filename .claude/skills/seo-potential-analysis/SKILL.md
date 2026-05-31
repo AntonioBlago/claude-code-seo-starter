@@ -10,7 +10,7 @@ and euros an SEO engagement realistically produces over 12 months.
 
 ## Preconditions
 
-A Status-Quo table must exist for the domain (run `seo-status-quo` / `/status-quo`
+A Status-Quo table must exist for the domain (run `seo-status-quo` / `/visibly-seo-status-quo`
 first). You need, per keyword: search volume (SV), current position, current clicks,
 impressions, and an intent label.
 
@@ -82,4 +82,4 @@ Save under `clients/<domain>/YYYY-MM-DD_Potential/`:
 - `top20_delta.md` — Top 20 keywords by click-delta (the headline story)
 - `roi_scenarios.md` — the three scenarios with the lead & SEA math
 
-Slash command: `/potential <domain>`. Full methodology: `docs/workflows.md`.
+Slash command: `/visibly-seo-potential <domain>`. Full methodology: `docs/workflows.md`.

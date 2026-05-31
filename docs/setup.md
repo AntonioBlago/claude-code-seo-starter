@@ -63,7 +63,7 @@ On first launch Claude Code asks you to approve the `visiblyai` MCP server —
 approve it. Then:
 
 ```
-/status-quo example.com
+/visibly-seo-status-quo example.com
 ```
 
 If the hook is working, any SEO-flavoured prompt gets a gentle nudge toward the

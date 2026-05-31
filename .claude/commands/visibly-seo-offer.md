@@ -11,8 +11,8 @@ Before drafting, load **all** client materials from `./clients/$ARGUMENTS/`:
 - Keyword files (Excel)
 - Existing audits (PDF — extract text first)
 - Call transcripts / email threads / previous offers
-- Status-Quo and Potential outputs (must exist — otherwise run `/status-quo` and
-  `/potential` first)
+- Status-Quo and Potential outputs (must exist — otherwise run `/visibly-seo-status-quo` and
+  `/visibly-seo-potential` first)
 
 ## Client context to surface
 
@@ -41,7 +41,7 @@ Management-ready elements:
 
 Save to `./clients/$ARGUMENTS/YYYY-MM-DD_Offer/`:
 - `offer_<client>_<YYYY-MM-DD>.md` (source)
-- Then run `/pdf-build` to produce the brand-compliant PDF.
+- Then run `/visibly-seo-pdf-build` to produce the brand-compliant PDF.
 
 Pull your contact / bank / legal block from your own private notes — keep them out
 of this repo.

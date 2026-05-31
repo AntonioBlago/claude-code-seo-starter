@@ -8,7 +8,7 @@ Run **Workflow 2 — Potential Analysis** (see `docs/workflows.md`) for client `
 ## Preconditions
 
 - Status-Quo output must exist under `./clients/$ARGUMENTS/`. If it does not, stop
-  and tell the user to run `/status-quo $ARGUMENTS` first.
+  and tell the user to run `/visibly-seo-status-quo $ARGUMENTS` first.
 
 ## Steps
 
