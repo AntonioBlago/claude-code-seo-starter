@@ -1,0 +1,33 @@
+# Secrets — never commit
+.env
+.env.local
+*.key
+*_secret*
+
+# Claude Code local overrides (may contain machine-specific paths / permissions)
+.claude/settings.local.json
+
+# Client work — keep client data out of the template repo
+SEO projects/
+clients/
+*.xlsx
+*.csv
+*.pdf
+!docs/**/*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# Playwright / MCP scratch
+.playwright-mcp/
