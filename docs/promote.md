@@ -35,7 +35,7 @@ schema bumps; keep `$schema` in `server.json` current.
 
 ---
 
-## 2. punkpeye/awesome-mcp-servers — 🔑 one PR
+## 2. punkpeye/awesome-mcp-servers — ⏳ PR open ([#7207](https://github.com/punkpeye/awesome-mcp-servers/pull/7207)), awaiting merge
 
 The most-linked MCP list, mirrored to glama.ai. Fork
 <https://github.com/punkpeye/awesome-mcp-servers>, add **one line** under the **Marketing**
