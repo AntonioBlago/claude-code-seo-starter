@@ -5,6 +5,7 @@
   "description": "Wire up the Visibly AI MCP and run the full SEO client workflow in Claude Code: status-quo, potential analysis, offer, and a CI-compliant PDF. Intent-aware CTR model from the Keyword Study 2026.",
   "author": {
     "name": "Antonio Blago",
+    "email": "info@antonioblago.com",
     "url": "https://antonioblago.de"
   },
   "homepage": "https://github.com/AntonioBlago/claude-code-seo-starter",

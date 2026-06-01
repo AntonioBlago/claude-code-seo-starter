@@ -1,12 +1,11 @@
 {
   "name": "antonioblago",
-  "displayName": "Antonio Blago — SEO Plugins",
   "description": "SEO & GEO tooling for Claude Code by Antonio Blago (Neuro-SEO System®).",
   "owner": {
     "name": "Antonio Blago",
+    "email": "info@antonioblago.com",
     "url": "https://antonioblago.de"
   },
-  "homepage": "https://github.com/AntonioBlago/claude-code-seo-starter",
   "version": "0.1.0",
   "plugins": [
     {
