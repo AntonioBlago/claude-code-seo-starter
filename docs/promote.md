@@ -60,15 +60,27 @@ Optionally register the server at <https://glama.ai/mcp/servers> for an auto-ind
 
 ---
 
-## 3. Anthropic community plugin marketplace — 🔑 form review
+## 3. Anthropic community plugin marketplace — 🔑 ready to submit
 
 Beyond `/plugin marketplace add <github>`, Anthropic runs a reviewed **community** marketplace
-that surfaces inside Claude Code. Submit via the in-app `/plugin` submission flow (or the plugins
-submission page in Claude settings). Pre-flight before submitting:
+(`anthropics/claude-plugins-community`) that surfaces inside Claude Code. Third-party plugins are
+submitted via the public form and must pass automated `claude plugin validate` before landing.
 
-- `README.md` has clear install + usage (✅ already)
-- `.claude-plugin/plugin.json` has `name`, `version`, `description` (✅)
-- `.claude-plugin/marketplace.json` valid (✅)
+**Submit here:** <https://clau.de/plugin-directory-submission>
+(alt: `claude.ai/settings/plugins/submit`)
+
+Form answers:
+
+- Marketplace / repo URL: `https://github.com/AntonioBlago/claude-code-seo-starter`
+- Marketplace name: `antonioblago`
+- Plugin name: `seo-starter`
+
+Pre-flight (all ✅):
+
+- `claude plugin validate .` → "✔ Validation passed", zero warnings
+- `README.md` has clear install + usage
+- `.claude-plugin/plugin.json` has `name`, `version`, `description`, `author.email`
+- `.claude-plugin/marketplace.json` valid (`owner.email` set, no unknown fields)
 - Plugin installs cleanly from a fresh clone
 
 Install string to advertise everywhere:
