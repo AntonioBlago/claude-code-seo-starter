@@ -4,7 +4,7 @@
       "type": "http",
       "url": "https://mcp.visibly-ai.com/mcp",
       "headers": {
-        "Authorization": "Bearer ${VISIBLY_AI_API_KEY}"
+        "Authorization": "Bearer ${VISIBLYAI_API_KEY}"
       }
     }
   }

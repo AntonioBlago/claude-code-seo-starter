@@ -11,10 +11,10 @@ echo "Checking Claude Code SEO Starter setup..."
 # .env
 if [ -f .env ]; then
   pass ".env exists"
-  if grep -q '^VISIBLY_AI_API_KEY=lc_' .env && ! grep -q 'lc_replace_me' .env; then
-    pass "VISIBLY_AI_API_KEY looks set"
+  if grep -q '^VISIBLYAI_API_KEY=lc_' .env && ! grep -q 'lc_replace_me' .env; then
+    pass "VISIBLYAI_API_KEY looks set"
   else
-    bad "VISIBLY_AI_API_KEY not set (edit .env, paste your lc_... key)"
+    bad "VISIBLYAI_API_KEY not set (edit .env, paste your lc_... key)"
   fi
 else
   bad ".env missing — run: cp .env.example .env"

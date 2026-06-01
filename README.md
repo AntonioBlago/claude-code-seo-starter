@@ -76,7 +76,7 @@ API key from the dashboard — takes about 30 seconds, no card required.
 ```bash
 cp .env.example .env
 # then edit .env and paste your key:
-# VISIBLY_AI_API_KEY=lc_xxxxxxxxxxxxxxxx
+# VISIBLYAI_API_KEY=lc_xxxxxxxxxxxxxxxx
 ```
 
 The `.mcp.json` reads the key from the environment — **no secret ever lands in git**.

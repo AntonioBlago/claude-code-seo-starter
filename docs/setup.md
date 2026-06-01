@@ -27,7 +27,7 @@ cd claude-code-seo-starter
 2. Copy the env template and paste your key:
    ```bash
    cp .env.example .env
-   # edit .env → VISIBLY_AI_API_KEY=lc_your_key_here
+   # edit .env → VISIBLYAI_API_KEY=lc_your_key_here
    ```
 3. The connection itself is already defined in `.mcp.json`:
    ```json
@@ -36,12 +36,12 @@ cd claude-code-seo-starter
        "visiblyai": {
          "type": "http",
          "url": "https://mcp.visibly-ai.com/mcp",
-         "headers": { "Authorization": "Bearer ${VISIBLY_AI_API_KEY}" }
+         "headers": { "Authorization": "Bearer ${VISIBLYAI_API_KEY}" }
        }
      }
    }
    ```
-   The `${VISIBLY_AI_API_KEY}` is read from your environment — **the key never
+   The `${VISIBLYAI_API_KEY}` is read from your environment — **the key never
    lands in git.**
 
 ## 4. Verify your setup
@@ -82,7 +82,7 @@ Visibly AI tools.
 
 | Symptom | Fix |
 |---|---|
-| MCP server won't connect | Check `.env` has a valid `VISIBLY_AI_API_KEY`; restart `claude`. |
+| MCP server won't connect | Check `.env` has a valid `VISIBLYAI_API_KEY`; restart `claude`. |
 | Hook does nothing | Ensure `bash` is on PATH (Git Bash on Windows) and the hook path in `.claude/settings.json` is correct. |
-| `${VISIBLY_AI_API_KEY}` shows up literally | Your shell didn't export the var — Claude Code loads `.env` automatically, but if you run tools manually, `export` it first. |
+| `${VISIBLYAI_API_KEY}` shows up literally | Your shell didn't export the var — Claude Code loads `.env` automatically, but if you run tools manually, `export` it first. |
 | Permission prompts every call | Pre-approve tools in `.claude/settings.json` → `permissions.allow`. |
