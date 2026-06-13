@@ -1,5 +1,5 @@
 ---
-name: seo-offer
+name: visibly-seo-offer
 description: Draft a tailored, phased SEO consulting offer. Use when the user asks to write a proposal, Angebot, statement of work, or retainer for a prospect — turning analysis data plus client context (budget, team, decision process, tools) into a structured, priced, management-ready offer.
 ---
 
@@ -53,6 +53,6 @@ internal linking". Give priority and estimated effort per workstream.
 ## Output
 
 `clients/<domain>/YYYY-MM-DD_Offer/offer_<client>_<date>.md` (copied from
-`templates/offer-template.md`) → then hand to `ci-pdf-build` /
-`/visibly-seo-pdf-build` for the client-ready PDF. Slash command: `/visibly-seo-offer <domain>`.
+`templates/offer-template.md`) → then hand to `/visibly-seo-pdf-build`
+for the client-ready PDF. Slash command: `/visibly-seo-offer <domain>`.
 Methodology: `docs/workflows.md`.

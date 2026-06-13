@@ -1,5 +1,5 @@
 ---
-name: seo-status-quo
+name: visibly-seo-status-quo
 description: Map a client domain's current organic visibility. Use when the user asks to analyse where a site ranks, audit its Search Console performance, cross-reference target keywords against live GSC data, find quick wins, or benchmark against competitors. Pulls real GSC/keyword data via the Visibly AI MCP rather than guessing.
 ---
 

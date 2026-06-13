@@ -1,5 +1,5 @@
 ---
-name: seo-potential-analysis
+name: visibly-seo-potential
 description: Quantify the traffic, lead, and ROI upside of an SEO engagement. Use when the user asks how much organic traffic or revenue is realistically achievable, wants a 12-month forecast, an SEA-equivalent value, a click-delta projection, or a business case for SEO spend. Applies the intent-aware Keyword Study 2026 CTR curve — never idealised textbook CTRs.
 ---
 
@@ -10,7 +10,7 @@ and euros an SEO engagement realistically produces over 12 months.
 
 ## Preconditions
 
-A Status-Quo table must exist for the domain (run `seo-status-quo` / `/visibly-seo-status-quo`
+A Status-Quo table must exist for the domain (run `/visibly-seo-status-quo`
 first). You need, per keyword: search volume (SV), current position, current clicks,
 impressions, and an intent label.
 

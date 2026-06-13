@@ -1,5 +1,5 @@
 ---
-name: ci-pdf-build
+name: visibly-seo-pdf-build
 description: Build a clean, brand-compliant PDF from an analysis or offer. Use when the user asks to generate, render, or export a client-ready PDF presentation or document with their corporate identity — cover page, header/footer, section bars, tables, ROI boxes.
 ---
 
