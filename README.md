@@ -48,7 +48,22 @@ There are two ways to use this — pick one.
 
 You get the `/visibly-seo-status-quo`, `/visibly-seo-potential`, `/visibly-seo-offer`, `/visibly-seo-pdf-build` commands, the
 auto-invoked SEO skills, the SEO-intent hook, and the Visibly AI MCP — wired in.
-Then just set your key (step 3 below). Restart with `/reload-plugins` if needed.
+
+Then set your Visibly AI key. The bundled `.mcp.json` reads it from the **environment**
+(plugin installs have no cloned repo, so there's no `.env` to copy) — pick one:
+
+```bash
+# a) a real environment variable
+setx VISIBLYAI_API_KEY "lc_xxxxxxxxxxxxxxxx"   # Windows (new shells); macOS/Linux: export VISIBLYAI_API_KEY=...
+```
+
+```jsonc
+// b) or in ~/.claude/settings.json
+{ "env": { "VISIBLYAI_API_KEY": "lc_xxxxxxxxxxxxxxxx" } }
+```
+
+**Don't have a key?** Grab a free one at [visibly-ai.com](https://visibly-ai.com) (~30s, no card).
+Restart with `/reload-plugins` if needed.
 
 ### Option B — Clone the template
 
