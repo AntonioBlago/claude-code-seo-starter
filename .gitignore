@@ -20,6 +20,7 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+claude_tools_venv/
 *.egg-info/
 
 # OS / editor cruft

@@ -20,13 +20,13 @@
 
 SEO consulting is the same five jobs over and over: pull the real ranking data, map it against the client's keyword set, quantify the opportunity, turn that into an offer, and ship a presentable PDF. Claude Code can do all of it — *if* you give it the data sources, the methodology, and the guardrails.
 
-This repo packages exactly that. Install it, drop in a [Visibly AI](https://visibly-ai.com) key — **free tier available, 30 seconds to a key** — and you have an SEO analyst on tap that knows your process. Visibly AI is the data engine behind the whole workflow: GSC, keywords, backlinks, competitors and on-page audits through one MCP.
+This repo packages exactly that — and it **runs without any API key**. Install it and the bundled `.mcp.json` connects to the [Visibly AI](https://visibly-ai.com) MCP keyless, giving you 8 free tools (keyword classification, SEO checklists, URL-structure analysis) plus the full local methodology; bring your own Search Console export and the entire Status-Quo → Potential → Offer → PDF chain runs offline. Add a Visibly AI key when you want the data engine on tap — live GSC/GA at **0 credits**, keywords, backlinks, competitors and on-page audits through one MCP. Free by default, pro when you need it.
 
 ## ✨ What's inside
 
 | Piece | What it does |
 |---|---|
-| **`.mcp.json`** | Pre-wired [Visibly AI MCP](https://visibly-ai.com) connection — GSC, keywords, backlinks, competitors, on-page audits, crawling. |
+| **`.mcp.json`** | Pre-wired [Visibly AI MCP](https://visibly-ai.com) connection — **keyless by default** (8 free tools); add a key to unlock live GSC, keywords, backlinks, competitors, on-page audits, crawling. |
 | **`/visibly-seo-status-quo`** | Maps a client's live organic visibility: GSC × target keywords, classification, quick wins. |
 | **`/visibly-seo-potential`** | Potential analysis: empirical CTR model → realistic 12-month targets → traffic, lead & ROI math. |
 | **`/visibly-seo-offer`** | Drafts a tailored, phased SEO consulting offer from your analysis + client context. |
@@ -47,23 +47,20 @@ There are two ways to use this — pick one.
 ```
 
 You get the `/visibly-seo-status-quo`, `/visibly-seo-potential`, `/visibly-seo-offer`, `/visibly-seo-pdf-build` commands, the
-auto-invoked SEO skills, the SEO-intent hook, and the Visibly AI MCP — wired in.
+auto-invoked SEO skills, the SEO-intent hook, and the keyless Visibly AI MCP — wired in.
+**No key needed to start** — approve the MCP server and you have the 8 free tools plus
+the full local workflow.
 
-Then set your Visibly AI key. The bundled `.mcp.json` reads it from the **environment**
-(plugin installs have no cloned repo, so there's no `.env` to copy) — pick one:
+**Want the full data engine (live GSC, keywords, backlinks, on-page)?** Add a Visibly AI
+key — grab one at [visibly-ai.com](https://visibly-ai.com) (~30s, no card), then connect it
+once (resolves at write time, stays out of git):
 
 ```bash
-# a) a real environment variable
-setx VISIBLYAI_API_KEY "lc_xxxxxxxxxxxxxxxx"   # Windows (new shells); macOS/Linux: export VISIBLYAI_API_KEY=...
+claude mcp add --transport http visiblyai https://mcp.visibly-ai.com/mcp --header "Authorization: Bearer lc_xxxxxxxxxxxxxxxx"
 ```
 
-```jsonc
-// b) or in ~/.claude/settings.json
-{ "env": { "VISIBLYAI_API_KEY": "lc_xxxxxxxxxxxxxxxx" } }
-```
-
-**Don't have a key?** Grab a free one at [visibly-ai.com](https://visibly-ai.com) (~30s, no card).
-Restart with `/reload-plugins` if needed.
+Restart with `/reload-plugins` if needed. See [`docs/setup.md`](docs/setup.md) for the
+pro tier, Google-OAuth (0 credits) and optional DataForSEO wiring.
 
 ### Option B — Clone the template
 
@@ -72,7 +69,7 @@ Use the full repo (docs, PDF template, setup script) as a project scaffold.
 ### 1. Prerequisites
 
 - [Claude Code](https://docs.claude.com/en/docs/claude-code) installed (`npm install -g @anthropic-ai/claude-code`)
-- A [Visibly AI](https://visibly-ai.com) account — **[sign up free](https://visibly-ai.com)**, the free tier is enough to run the full workflow
+- *(Optional)* a [Visibly AI](https://visibly-ai.com) account for the pro tier — **[sign up free](https://visibly-ai.com)**. Not required: the starter runs keyless.
 - Python 3.11+ (only needed for the PDF / data-crunching helpers)
 
 ### 2. Get the blueprint
@@ -83,18 +80,18 @@ git clone https://github.com/AntonioBlago/claude-code-seo-starter.git
 cd claude-code-seo-starter
 ```
 
-### 3. Add your Visibly AI key
+### 3. (Optional) add your Visibly AI key
 
-**Don't have a key yet?** Create a free account at **[visibly-ai.com](https://visibly-ai.com)** and copy your
-API key from the dashboard — takes about 30 seconds, no card required.
+Skip this for the free tier — the keyless `.mcp.json` already works. To unlock the
+full data engine, create a free account at **[visibly-ai.com](https://visibly-ai.com)**,
+copy your `lc_...` key, and connect it once (resolves at write time, stays out of git):
 
 ```bash
-cp .env.example .env
-# then edit .env and paste your key:
-# VISIBLYAI_API_KEY=lc_xxxxxxxxxxxxxxxx
+claude mcp add --transport http visiblyai https://mcp.visibly-ai.com/mcp --header "Authorization: Bearer lc_xxxxxxxxxxxxxxxx"
 ```
 
-The `.mcp.json` reads the key from the environment — **no secret ever lands in git**.
+Full tier breakdown, Google-OAuth (live GSC/GA at 0 credits) and optional DataForSEO
+wiring: **[`docs/setup.md`](docs/setup.md)**.
 
 ### 4. Launch
 
@@ -108,7 +105,8 @@ On first run, Claude Code will ask you to approve the Visibly AI MCP server. App
 /visibly-seo-status-quo example.com
 ```
 
-That's it. You're running the full SEO workflow.
+That's it. On the free tier, feed a GSC export to the Python templates; with a key,
+data is pulled live. Either way you're running the full SEO workflow.
 
 ## 🔁 The workflows
 
@@ -133,7 +131,7 @@ The differentiator: the curve is **intent-aware**. A navigational keyword at pos
 Everything is plain Markdown and shell — fork and adapt:
 
 - **Branding** — edit `CLAUDE.md` and `templates/pdf_example.py` with your colours, fonts, contact block.
-- **Data source** — swap or add MCP servers in `.mcp.json` (GA4, Ahrefs, etc.).
+- **Data source** — keyless by default; add a Visibly key for the full engine, or wire your own (GSC export → Python templates, [DataForSEO](https://dataforseo.com/?aff=186597), GA4, Ahrefs…) in `.mcp.json`. See [`docs/setup.md`](docs/setup.md).
 - **Workflows** — the `.claude/commands/*.md` files *are* the workflows. Rewrite them in your own words.
 - **Guardrails** — extend `.claude/hooks/seo-check.sh` with your own keyword triggers.
 
@@ -146,9 +144,9 @@ claude-code-seo-starter/
 ├── .claude-plugin/           # makes this repo an installable plugin + marketplace
 │   ├── plugin.json           # plugin manifest
 │   └── marketplace.json      # marketplace catalog (one repo = both)
-├── .mcp.json                 # Visibly AI MCP connection (key via env)
+├── .mcp.json                 # Visibly AI MCP connection — keyless (free tools); add key for pro
 ├── server.json               # MCP-registry manifest (publish via mcp-publisher)
-├── .env.example              # copy → .env, add your key
+├── .env.example              # copy → .env — optional key + separate data sources
 ├── CLAUDE.md                 # project instructions Claude reads on every run
 ├── .claude/
 │   ├── commands/             # /visibly-seo-status-quo /visibly-seo-potential /visibly-seo-offer /visibly-seo-pdf-build

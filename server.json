@@ -16,8 +16,8 @@
       "headers": [
         {
           "name": "Authorization",
-          "description": "Bearer <your Visibly AI API key>. Get a free key at https://visibly-ai.com",
-          "isRequired": true,
+          "description": "Optional. Bearer <your Visibly AI API key> unlocks all 32 tools; without it the server still serves the 8 free tools. Get a key at https://visibly-ai.com",
+          "isRequired": false,
           "isSecret": true
         }
       ]

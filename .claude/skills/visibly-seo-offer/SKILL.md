@@ -50,6 +50,22 @@ For **each** phase give: scope · deliverables · timeline · investment.
 Vague offers lose. "Add 10 internal links from these 5 pages to /target" beats "improve
 internal linking". Give priority and estimated effort per workstream.
 
+## Python template — pricing & ROI math
+
+Don't compute the Year-1 total, ROI multiple and payback by hand. Pass the phase prices
+and the realistic annual value (from the Potential analysis) to the **Python template**:
+
+```powershell
+.\claude_tools_venv\Scripts\python.exe -m claude_tools.offer_economics `
+    --phases "Setup:2500,Audit:6500,Retainer:25000" `
+    --annual-value 120000 `
+    --out "clients/<domain>/<date>_Offer/economics.xlsx"
+```
+
+It prints the section-8 ROI block (value : cost, ROI %, payback months) and writes a
+Pricing + ROI xlsx — keep the offer's price visibly smaller than the value it unlocks.
+Setup once: `.\claude_tools\setup.ps1`.
+
 ## Output
 
 `clients/<domain>/YYYY-MM-DD_Offer/offer_<client>_<date>.md` (copied from

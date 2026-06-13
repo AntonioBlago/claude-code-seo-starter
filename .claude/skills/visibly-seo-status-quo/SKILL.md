@@ -9,6 +9,13 @@ Establish, with **live data only**, where a domain stands organically in a targe
 market today. This is the foundation every later phase builds on — so every fact here
 must be verified, not assumed.
 
+> **Tier note.** Steps 1–2 use Visibly AI's Google tools (`query_search_console`,
+> `list_projects`), which need a Visibly key (**pro tier** — GSC/GA run at 0 credits
+> once Google is connected). **No key?** Skip to Step 3: export Search Console
+> (Performance → Queries → CSV) yourself and feed that CSV to the Python template in
+> Step 4 — the cross-reference, classification and quick-win logic all run locally and
+> keyless. Setup tiers: [`docs/setup.md`](../../../docs/setup.md) §3.
+
 ## Step 1 — Discover what's wired
 
 1. `mcp__visiblyai__list_projects` — find the project matching the domain.
@@ -35,6 +42,22 @@ If no project/connection exists, stop and tell the user what to connect first.
 7. Classify on two axes:
    - **Type:** Brand · Generic · Competitor
    - **Ranking bucket:** Top 3 · Page 1 (4-10) · Page 2 (11-20) · Weak (21-50) · Not Ranking (50+/none)
+
+Don't do this join by hand. Save the GSC export (`dimension=query`) as CSV/XLSX next to
+the client's keyword file and run the **Python template** — it does the cross-reference,
+both classifications and the quick-win flag deterministically:
+
+```powershell
+.\claude_tools_venv\Scripts\python.exe -m claude_tools.status_quo `
+    --keywords "clients/<domain>/_knowledge/keywords.xlsx" `
+    --gsc      "clients/<domain>/<date>_Status-Quo/gsc_query.csv" `
+    --brand-terms <brand> --competitor-terms <comp1>,<comp2> `
+    --out      "clients/<domain>/<date>_Status-Quo/status_quo_<date>.xlsx"
+```
+
+It writes a 3-sheet xlsx (Status-Quo · Quick wins · Summary) with the exact columns the
+output template expects. Columns are auto-detected (DE/EN headers); first-time setup:
+`.\claude_tools\setup.ps1`. See [`claude_tools/README.md`](../../../claude_tools/README.md).
 
 ## Step 5 — Flag quick wins
 

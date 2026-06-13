@@ -1,0 +1,5 @@
+# claude_tools — Python helpers behind the SEO skills.
+# Install into claude_tools_venv (see setup.ps1 / setup.sh).
+fpdf2>=2.7
+pandas>=2.0
+openpyxl>=3.1

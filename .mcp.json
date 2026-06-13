@@ -2,10 +2,7 @@
   "mcpServers": {
     "visiblyai": {
       "type": "http",
-      "url": "https://mcp.visibly-ai.com/mcp",
-      "headers": {
-        "Authorization": "Bearer ${VISIBLYAI_API_KEY}"
-      }
+      "url": "https://mcp.visibly-ai.com/mcp"
     }
   }
 }

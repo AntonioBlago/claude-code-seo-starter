@@ -23,7 +23,7 @@ whole forecast. When unsure, infer from the SERP and the query form ("buy", "pri
 
 ## Step 2 — Apply the intent-aware CTR curve
 
-Read CTR from the **Keyword Study 2026** curve in [`docs/ctr-model.md`](../../docs/ctr-model.md)
+Read CTR from the **Keyword Study 2026** curve in [`docs/ctr-model.md`](../../../docs/ctr-model.md)
 (first-party GSC data, 1.3M keywords, 94 domains). Pick the column for the keyword's
 intent, the row for its position. Anchor values at position 1:
 
@@ -74,6 +74,24 @@ decision-maker acts on cluster rollups.
 
 Run all three scenarios (conservative / realistic / optimistic) so the client sees a
 range, not a single fragile number.
+
+## Python template — do the math reproducibly
+
+Steps 2-5 are mechanical and must be identical every time. Feed the Status-Quo xlsx
+straight into the **Python template**, which reads the intent-aware curve from
+[`claude_tools/ctr_model.py`](../../../claude_tools/ctr_model.py) (mirror of
+`docs/ctr-model.md`) — never an idealised curve:
+
+```powershell
+.\claude_tools_venv\Scripts\python.exe -m claude_tools.potential `
+    --in  "clients/<domain>/<date>_Status-Quo/status_quo_<date>.xlsx" `
+    --out "clients/<domain>/<date>_Potential/potential_<date>.xlsx" `
+    --avg-cpc <cpc> --close-rate 0.15 --deal-value <deal> --investment <year1>
+```
+
+Output is a 4-sheet xlsx (Per-keyword delta · Top 20 · Cluster rollup · Value scenarios)
+with target positions, click deltas and the three lead/SEA/ROI scenarios already computed —
+ready to paste into the template. Setup once: `.\claude_tools\setup.ps1`.
 
 ## Output
 

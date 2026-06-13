@@ -8,15 +8,36 @@ description: Build a clean, brand-compliant PDF from an analysis or offer. Use w
 Render a **brand-compliant, client-ready PDF** with fpdf2 (or a PDF MCP if one is
 connected — prefer it when available).
 
-## Step 1 — Start from the template
+## Step 1 — Start from the Python template
 
-Build on `templates/pdf_example.py` — the `CIPDF` class already implements cover,
-header/footer, section bars, body, and tables. Don't reinvent the layout.
+Import the reusable `CIPDF` class from
+[`claude_tools/ci_pdf.py`](../../../claude_tools/ci_pdf.py) — it already implements cover,
+header/footer, section bars, body, bullets, wrapping tables and KPI/ROI boxes, and pulls
+all brand colours/fonts from [`templates/ci/brand.py`](../../../templates/ci/brand.py)
+(one source of truth). Don't reinvent the layout or re-declare the CI.
+
+```python
+from claude_tools.ci_pdf import CIPDF
+pdf = CIPDF()
+pdf.cover("SEO Strategy & Offer", "Example GmbH", "2026-06-13")
+pdf.add_page(); pdf.section("1. Executive Summary"); pdf.body("…")
+pdf.kpi_box("ROI (realistic)", "233 %", "good")
+pdf.output("clients/<domain>/<date>_Offer/offer.pdf")
+```
+
+Run via the venv: `.\claude_tools_venv\Scripts\python.exe your_build_script.py`
+(setup once with `.\claude_tools\setup.ps1`). `templates/pdf_example.py` remains a
+standalone, zero-config reference if you want a copy to hack on without the package.
 
 ## Step 2 — Register fonts correctly
 
-Point the brand fonts at their `.ttf` files and **always register with `uni=True`** —
-otherwise `ä ö ü ß é ñ` break. Headings and body should use distinct brand fonts.
+`CIPDF` registers the brand fonts for you (always with `uni=True`, so `ä ö ü ß é ñ`
+render) **if** `templates/ci/brand.py` points `FONTS` at real `.ttf` files that exist —
+otherwise it falls back to Helvetica so the build never crashes. So the one-time job is:
+drop the brand TTFs in `fonts/` and set their paths in `brand.py`. Headings and body
+should use distinct brand fonts.
+
+If you build a PDF outside `CIPDF`, register fonts the same way — always `uni=True`:
 
 ```python
 pdf.add_font("Heading", "",  f"{FONT_DIR}/Heading-Regular.ttf", uni=True)
