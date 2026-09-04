@@ -20,13 +20,13 @@
 
 SEO consulting is the same five jobs over and over: pull the real ranking data, map it against the client's keyword set, quantify the opportunity, turn that into an offer, and ship a presentable PDF. Claude Code can do all of it — *if* you give it the data sources, the methodology, and the guardrails.
 
-This repo packages exactly that — and it **runs without any API key**. Install it and the bundled `.mcp.json` connects to the [Visibly AI](https://visibly-ai.com) MCP keyless, giving you 8 free tools (keyword classification, SEO checklists, URL-structure analysis) plus the full local methodology; bring your own Search Console export and the entire Status-Quo → Potential → Offer → PDF chain runs offline. Add a Visibly AI key when you want the data engine on tap — live GSC/GA at **0 credits**, keywords, backlinks, competitors and on-page audits through one MCP. Free by default, pro when you need it.
+This repo packages exactly that — and it **runs without any API key**. Install it and the bundled `.mcp.json` connects to the [Visibly AI](https://visibly-ai.com) MCP keyless, giving you the free knowledge tools (keyword classification, SEO checklists, Google guidelines, URL-structure analysis) plus the full local methodology; bring your own Search Console export and the entire Status-Quo → Potential → Offer → PDF chain runs offline. Add a Visibly AI key when you want the data engine on tap — live GSC/GA at **0 credits**, keywords, backlinks, competitors and on-page audits through one MCP. Free by default, pro when you need it.
 
 ## ✨ What's inside
 
 | Piece | What it does |
 |---|---|
-| **`.mcp.json`** | Pre-wired [Visibly AI MCP](https://visibly-ai.com) connection — **keyless by default** (8 free tools); add a key to unlock live GSC, keywords, backlinks, competitors, on-page audits, crawling. |
+| **`.mcp.json`** | Pre-wired [Visibly AI MCP](https://visibly-ai.com) connection — **keyless by default** (free knowledge tools); add a key to unlock live GSC, keywords, backlinks, competitors, on-page audits, crawling. |
 | **`/visibly-seo-status-quo`** | Maps a client's live organic visibility: GSC × target keywords, classification, quick wins. |
 | **`/visibly-seo-potential`** | Potential analysis: empirical CTR model → realistic 12-month targets → traffic, lead & ROI math. |
 | **`/visibly-seo-offer`** | Drafts a tailored, phased SEO consulting offer from your analysis + client context. |
@@ -48,7 +48,7 @@ There are two ways to use this — pick one.
 
 You get the `/visibly-seo-status-quo`, `/visibly-seo-potential`, `/visibly-seo-offer`, `/visibly-seo-pdf-build` commands, the
 auto-invoked SEO skills, the SEO-intent hook, and the keyless Visibly AI MCP — wired in.
-**No key needed to start** — approve the MCP server and you have the 8 free tools plus
+**No key needed to start** — approve the MCP server and you have the free knowledge tools plus
 the full local workflow.
 
 **Want the full data engine (live GSC, keywords, backlinks, on-page)?** Add a Visibly AI
@@ -126,6 +126,15 @@ The potential analysis is only as good as its click-through-rate curve. This rep
 
 The differentiator: the curve is **intent-aware**. A navigational keyword at position 1 earns ~8.9% CTR; an informational one ~3.2%. Forecasting with one blended number quietly mis-states the upside. See **[`docs/ctr-model.md`](docs/ctr-model.md)** for the full intent-by-position table and the Python to apply it. Honest inputs → defensible forecasts → offers that survive scrutiny.
 
+## 🔍 Transparency — what runs where
+
+No surprises about data flow:
+
+- **Keyless (default):** `.mcp.json` connects to `mcp.visibly-ai.com` without an account. Only the free knowledge tools respond (checklists, guidance, Google guidelines, keyword classification, URL-structure checks) — no client data involved.
+- **With a key:** the data tools (`query_search_console`, `query_analytics`, keywords, backlinks, on-page) route through the Visibly AI backend, hosted on **Railway in the EU**. Your GSC/GA data passes through that backend to reach Claude — that's the product, not a side effect. Not acceptable for a client? Don't add the key: feed a GSC export to the local Python templates instead — the full workflow still runs.
+- **Permissions:** `.claude/settings.json` auto-allows only metadata and the free knowledge tools. Every tool that reads client data (GSC, GA, keywords, backlinks, on-page, crawling) sits in `ask` — Claude prompts before using it.
+- **The hook** (`.claude/hooks/seo-check.sh`) runs locally, sends nothing anywhere, and only injects a reminder to use real data instead of guessing when your prompt looks SEO-related. Don't want the nudge? Delete the hook.
+
 ## 🎨 Customise it
 
 Everything is plain Markdown and shell — fork and adapt:
@@ -152,7 +161,7 @@ claude-code-seo-starter/
 │   ├── commands/             # /visibly-seo-status-quo /visibly-seo-potential /visibly-seo-offer /visibly-seo-pdf-build
 │   ├── skills/               # auto-invoked SEO skills (status-quo, potential, offer, pdf)
 │   ├── hooks/                # seo-check.sh + hooks.json — SEO-intent nudge
-│   └── settings.json         # hook registration + sane permissions (clone mode)
+│   └── settings.json         # hook registration + permissions (free tools allowed, data tools ask)
 ├── docs/
 │   ├── setup.md              # detailed setup
 │   ├── workflows.md          # the 4-phase methodology

@@ -16,6 +16,16 @@
     "allow": [
       "mcp__visiblyai__list_projects",
       "mcp__visiblyai__get_google_connections",
+      "mcp__visiblyai__get_skill",
+      "mcp__visiblyai__seo_checklist",
+      "mcp__visiblyai__seo_guidance",
+      "mcp__visiblyai__get_google_guidelines",
+      "mcp__visiblyai__classify_keywords_simple",
+      "mcp__visiblyai__analyze_url_structure",
+      "mcp__visiblyai__list_locations"
+    ],
+    "ask": [
+      "mcp__visiblyai__classify_keywords_advanced",
       "mcp__visiblyai__query_search_console",
       "mcp__visiblyai__query_analytics",
       "mcp__visiblyai__get_keywords",
@@ -23,10 +33,7 @@
       "mcp__visiblyai__get_competitors",
       "mcp__visiblyai__get_referring_domains",
       "mcp__visiblyai__onpage_analysis",
-      "mcp__visiblyai__analyze_url_structure",
-      "mcp__visiblyai__check_links"
-    ],
-    "ask": [
+      "mcp__visiblyai__check_links",
       "mcp__visiblyai__crawl_website"
     ]
   }

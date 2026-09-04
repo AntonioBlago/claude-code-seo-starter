@@ -28,7 +28,7 @@ free tier works the moment you launch — no account, no key, no `.env`.
 | | Free tier (default) | Pro tier |
 |---|---|---|
 | **Key** | none | Visibly AI key (`lc_...`) |
-| **Visibly tools** | 8 free (keyword classification, SEO checklist/guidance, URL-structure, locations) | all 32 (live GSC/GA, keywords, backlinks, competitors, on-page, crawl) |
+| **Visibly tools** | free knowledge tools (keyword classification, SEO checklist/guidance, Google guidelines, URL-structure, locations, skills) | full toolset (live GSC/GA, keywords, backlinks, competitors, on-page, crawl) |
 | **Ranking data** | a GSC export you feed to the Python templates | live via `query_search_console` / `get_keywords` |
 | **Credits** | none used | GSC/GA = 0 credits; DataForSEO-backed tools spend credits |
 
@@ -47,7 +47,7 @@ The connection is already defined in `.mcp.json`, with **no auth header**:
 }
 ```
 
-Without the `headers` block the server serves the 8 free tools. For real ranking
+Without the `headers` block the server serves the free knowledge tools. For real ranking
 data, export Search Console (Performance → Queries → CSV) and feed it straight to
 the Python templates — the whole Status-Quo → Potential → Offer → PDF chain runs
 locally and keyless:
@@ -72,7 +72,7 @@ python -m claude_tools.status_quo --gsc gsc_query.csv --keywords keywords.xlsx -
    > **Windows / PowerShell:** run it as a single line — the `\` line-continuation
    > is not valid there and trips the parser.
 
-   That unlocks all 32 tools. To use real Google data at **0 credits**, also
+   That unlocks the full toolset. To use real Google data at **0 credits**, also
    connect Google OAuth in your Visibly account (Account → Google connections) —
    then `query_search_console`, `query_analytics` and `get_keywords` read your own
    GSC/GA; DataForSEO is only used (and only spends credits) as the fallback for

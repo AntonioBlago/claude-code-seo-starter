@@ -8,15 +8,32 @@ set -eu
 
 input="$(cat)"
 
-prompt="$(
-  printf '%s' "$input" | python -c '
+# macOS ships only `python3`, many Windows setups only `python` — probe both.
+# Probe by RUNNING it: `command -v` alone finds the non-executable
+# Microsoft-Store stub on Windows (exit 126).
+PY=""
+for cand in python3 python; do
+  if "$cand" -c 'pass' >/dev/null 2>&1; then
+    PY="$cand"
+    break
+  fi
+done
+
+if [ -n "$PY" ]; then
+  prompt="$(
+    printf '%s' "$input" | "$PY" -c '
 import json, sys
 try:
     print(json.loads(sys.stdin.read()).get("prompt", ""))
 except Exception:
     pass
 '
-)"
+  )"
+else
+  # No Python at all: match against the raw JSON instead. Slightly broader
+  # (other fields could match), but the hook must never error out.
+  prompt="$input"
+fi
 
 # Case-insensitive keyword check. Add your own triggers here.
 if printf '%s' "$prompt" | grep -Eiq '\b(seo|ranking|gsc|search console|keyword|backlink|crawl|onpage|serp|visibility|competitor)\b'; then
