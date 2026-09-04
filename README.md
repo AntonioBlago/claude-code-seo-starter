@@ -140,7 +140,7 @@ No surprises about data flow:
 Everything is plain Markdown and shell — fork and adapt:
 
 - **Branding** — edit `CLAUDE.md` and `templates/pdf_example.py` with your colours, fonts, contact block.
-- **Data source** — keyless by default; add a Visibly key for the full engine, or wire your own (GSC export → Python templates, [DataForSEO](https://dataforseo.com/?aff=186597), GA4, Ahrefs…) in `.mcp.json`. See [`docs/setup.md`](docs/setup.md).
+- **Data source** — keyless by default; add a Visibly key for the full engine, or wire your own (GSC export → Python templates, [DataForSEO](https://dataforseo.com/?aff=186597), GA4, Ahrefs…) in `.mcp.json`. See [`docs/setup.md`](docs/setup.md). Free walkthrough for building your own GSC access from scratch: [Indexing Checker für die Google Search Console](https://www.antonioblago.com/de/blog/google-search-console-indexing-performance-checker-skript) (German).
 - **Workflows** — the `.claude/commands/*.md` files *are* the workflows. Rewrite them in your own words.
 - **Guardrails** — extend `.claude/hooks/seo-check.sh` with your own keyword triggers.
 
