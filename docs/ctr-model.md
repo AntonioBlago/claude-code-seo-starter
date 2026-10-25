@@ -6,7 +6,7 @@ world — post-AI-Overviews, post-zero-click — those are wildly optimistic, an
 offer built on them collapses the moment a client checks the math against their
 own Search Console.
 
-This blueprint uses the **Keyword Study 2026** by [Antonio Blago](https://antonioblago.de)
+This blueprint uses the **Keyword Study 2026** by [Antonio Blago](https://www.antonioblago.com)
 instead — CTR by position derived from **first-party Google Search Console data**.
 
 > **Source of truth:** <https://www.antonioblago.com/keyword-study-2026-organic-search-ctr>

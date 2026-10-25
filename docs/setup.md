@@ -5,11 +5,17 @@ A deeper walkthrough than the README quickstart.
 ## 1. Install Claude Code
 
 ```bash
-npm install -g @anthropic-ai/claude-code
+# macOS, Linux, WSL (native installer, updates itself)
+curl -fsSL https://claude.ai/install.sh | bash
+# Windows PowerShell (no admin needed)
+irm https://claude.ai/install.ps1 | iex
+
 claude --version
 ```
 
-Docs: <https://docs.claude.com/en/docs/claude-code>
+Docs: <https://code.claude.com/docs/en/setup>. First time with Claude Code? Run
+[claude-homebase](https://github.com/AntonioBlago/claude-homebase) first: `/homebase` builds your global CLAUDE.md and
+project folders, then come back here for the SEO workflows.
 
 ## 2. Get the blueprint
 

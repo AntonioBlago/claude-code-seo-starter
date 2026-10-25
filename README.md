@@ -2,7 +2,7 @@
 
 > A batteries-included [Claude Code](https://claude.com/claude-code) blueprint for SEO freelancers and agencies. Wire up the **Visibly AI MCP**, get ready-made slash commands for the full client workflow — Status-Quo → Potential Analysis → Offer → CI-compliant PDF — and a smart hook that nudges Claude toward real SEO data instead of guessing.
 >
-> Built and battle-tested by **[Antonio Blago](https://antonioblago.de)** — SEO Freelancer & creator of the **Neuro-SEO System®**.
+> Built and battle-tested by **[Antonio Blago](https://www.antonioblago.com)** — SEO Freelancer & creator of the **Neuro-SEO System®**.
 
 <p align="center">
   <a href="#-quickstart">Quickstart</a> •
@@ -68,7 +68,7 @@ Use the full repo (docs, PDF template, setup script) as a project scaffold.
 
 ### 1. Prerequisites
 
-- [Claude Code](https://docs.claude.com/en/docs/claude-code) installed (`npm install -g @anthropic-ai/claude-code`)
+- [Claude Code](https://code.claude.com/docs/en/setup) installed with the native installer: `curl -fsSL https://claude.ai/install.sh | bash` (macOS, Linux, WSL) or `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell). New to Claude Code? Start with [claude-homebase](https://github.com/AntonioBlago/claude-homebase): `/homebase` sets up your global CLAUDE.md and project structure, then pick the SEO path to land here.
 - *(Optional)* a [Visibly AI](https://visibly-ai.com) account for the pro tier — **[sign up free](https://visibly-ai.com)**. Not required: the starter runs keyless.
 - Python 3.11+ (only needed for the PDF / data-crunching helpers)
 
@@ -180,6 +180,18 @@ claude-code-seo-starter/
     └── check-setup.sh        # verify your env is wired correctly
 ```
 
+## Related repos
+
+| Repo | What it adds |
+|---|---|
+| [claude-homebase](https://github.com/AntonioBlago/claude-homebase) | How to set up Claude Code from scratch: `/homebase` interviews your role and builds CLAUDE.md, folders, skills and learnings |
+| [claude-context-guard](https://github.com/AntonioBlago/claude-context-guard) | Warns when the context gets expensive and carries a handoff briefing across `/clear` |
+| [delegate-audit](https://github.com/AntonioBlago/delegate-audit) | Lints Claude Code skills and LLM pipelines against the DELEGATE-52 hygiene rules |
+| [visiblyai-mcp-server](https://github.com/AntonioBlago/visiblyai-mcp-server) | The Visibly AI MCP server behind this starter |
+| [peec-ai-skills](https://github.com/AntonioBlago/peec-ai-skills) | Skills for brand visibility in ChatGPT, Perplexity and Google AI Overviews |
+
+More on the method: [best Claude Code skills for developers](https://www.antonioblago.com/blog/best-claude-code-skills-developers?utm_source=github&utm_medium=readme&utm_campaign=seo-starter).
+
 ## 🤝 Contributing
 
 PRs welcome — see [`CONTRIBUTING.md`](CONTRIBUTING.md). Found this useful? A ⭐ helps others find it.
@@ -195,7 +207,7 @@ If you'd rather have this dialled in to your agency's workflow — or want to ta
 ---
 
 <p align="center">
-  Created by <strong><a href="https://antonioblago.de">Antonio Blago</a></strong> — SEO Freelancer & Neuro-SEO System®<br>
+  Created by <strong><a href="https://www.antonioblago.com">Antonio Blago</a></strong> — SEO Freelancer & Neuro-SEO System®<br>
   <a href="https://calendly.com/antonio-blago/vibe-coding-consultation?back=1&month=2026-06"><strong>📅 Book a consultation</strong></a><br>
   <sub>If this saves you an afternoon per client, it did its job.</sub>
 </p>

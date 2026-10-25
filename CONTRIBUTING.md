@@ -29,4 +29,4 @@ for SEO freelancers and agencies running Claude Code.
 
 ## Questions
 
-Open an issue, or reach out via [antonioblago.de](https://antonioblago.de).
+Open an issue, or reach out via [antonioblago.com](https://www.antonioblago.com).
