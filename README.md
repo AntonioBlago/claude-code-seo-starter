@@ -16,6 +16,8 @@
 
 ---
 
+> **Want the full setup?** This starter covers the SEO workflows of a larger kit. The [Claude Code Starter Set](https://www.antonioblago.com/skills/claude-code-starter-set?utm_source=github&utm_medium=readme&utm_campaign=starter-set&utm_content=claude-code-seo-starter) bundles 61 skills, 3 safety hooks, 7 agent roles and an installer with dry run and backup, plus three courses. One purchase (399 €), updates included. The kit is currently in German, an English edition is in preparation.
+
 ## Why this exists
 
 SEO consulting is the same five jobs over and over: pull the real ranking data, map it against the client's keyword set, quantify the opportunity, turn that into an offer, and ship a presentable PDF. Claude Code can do all of it — *if* you give it the data sources, the methodology, and the guardrails.
@@ -61,6 +63,23 @@ claude mcp add --transport http visiblyai https://mcp.visibly-ai.com/mcp --heade
 
 Restart with `/reload-plugins` if needed. See [`docs/setup.md`](docs/setup.md) for the
 pro tier, Google-OAuth (0 credits) and optional DataForSEO wiring.
+
+### Second plugin in the same marketplace: homebase
+
+The marketplace `antonioblago` also lists [claude-homebase](https://github.com/AntonioBlago/claude-homebase), a free
+plugin that sets up your Claude Code workspace (`/homebase` interview) and adds Context Guard (a warning when a session
+gets large, plus a handoff briefing that survives `/clear`). Both plugins install independently:
+
+```
+/plugin marketplace add AntonioBlago/claude-code-seo-starter
+/plugin install seo-starter@antonioblago
+/plugin install homebase@antonioblago
+```
+
+**Auto-update.** Marketplaces from third parties do not update in the background by default. Open `/plugin`, go to the
+**Marketplaces** tab, select `antonioblago` and choose **Enable auto-update**. Without it, run
+`/plugin marketplace update antonioblago`, or `claude plugin update seo-starter@antonioblago` and
+`claude plugin update homebase@antonioblago` in your shell.
 
 ### Option B — Clone the template
 
