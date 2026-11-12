@@ -16,6 +16,8 @@
 
 ---
 
+> **Want the full setup?** This starter covers the SEO workflows of a larger kit. The [Claude Code Starter Set](https://www.antonioblago.com/skills/claude-code-starter-set?utm_source=github&utm_medium=readme&utm_campaign=starter-set&utm_content=claude-code-seo-starter) bundles 61 skills, 3 safety hooks, 7 agent roles and an installer with dry run and backup, plus three courses. One purchase (399 €), updates included. The kit is currently in German, an English edition is in preparation.
+
 ## Why this exists
 
 SEO consulting is the same five jobs over and over: pull the real ranking data, map it against the client's keyword set, quantify the opportunity, turn that into an offer, and ship a presentable PDF. Claude Code can do all of it — *if* you give it the data sources, the methodology, and the guardrails.
