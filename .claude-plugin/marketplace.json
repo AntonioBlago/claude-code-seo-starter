@@ -12,6 +12,14 @@
       "name": "seo-starter",
       "source": "./",
       "description": "Visibly AI MCP + full SEO client workflow (status-quo, potential, offer, CI-PDF) with the intent-aware Keyword Study 2026 CTR model."
+    },
+    {
+      "name": "homebase",
+      "source": {
+        "source": "github",
+        "repo": "AntonioBlago/claude-homebase"
+      },
+      "description": "Set up Claude Code with one structure for everything: /homebase interviews you and builds your CLAUDE.md, project folders, skills and learnings. Includes Context Guard, which warns when a session gets large and carries a handoff briefing across /clear."
     }
   ]
 }
