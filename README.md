@@ -64,6 +64,23 @@ claude mcp add --transport http visiblyai https://mcp.visibly-ai.com/mcp --heade
 Restart with `/reload-plugins` if needed. See [`docs/setup.md`](docs/setup.md) for the
 pro tier, Google-OAuth (0 credits) and optional DataForSEO wiring.
 
+### Second plugin in the same marketplace: homebase
+
+The marketplace `antonioblago` also lists [claude-homebase](https://github.com/AntonioBlago/claude-homebase), a free
+plugin that sets up your Claude Code workspace (`/homebase` interview) and adds Context Guard (a warning when a session
+gets large, plus a handoff briefing that survives `/clear`). Both plugins install independently:
+
+```
+/plugin marketplace add AntonioBlago/claude-code-seo-starter
+/plugin install seo-starter@antonioblago
+/plugin install homebase@antonioblago
+```
+
+**Auto-update.** Marketplaces from third parties do not update in the background by default. Open `/plugin`, go to the
+**Marketplaces** tab, select `antonioblago` and choose **Enable auto-update**. Without it, run
+`/plugin marketplace update antonioblago`, or `claude plugin update seo-starter@antonioblago` and
+`claude plugin update homebase@antonioblago` in your shell.
+
 ### Option B — Clone the template
 
 Use the full repo (docs, PDF template, setup script) as a project scaffold.
